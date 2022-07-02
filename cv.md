@@ -1,4 +1,10 @@
-#**<p style="text-align: center;">Voronkina Irina</p>**
+<p style="text-align: center;">
+<font size = 6>
+<b>
+Voronkina Irina
+</b>
+</font>
+</p>
 <p style="text-align: center;">irishavoronkina@gmail.com | +375291234567 | Minsk, Belarus</p>
 
 ---
