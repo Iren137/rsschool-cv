@@ -9,7 +9,7 @@ Voronkina Irina
 
 ---
 
-Skilled C++ Developer with expertise in delivering large-scale projects. Always focused on goals and delivering success to rapidly evolving and dynamic environments.
+Skilled C++ Developer with experience in development large-scale projects. Always focused on goals and achieving success to rapidly evolving and dynamic environments.
 
 ___
 
@@ -17,7 +17,15 @@ ___
 
 ___
 
-C++, Python, JavaScript
+C++, Assembly, Python, JavaScript
+
+HTML, CSS
+
+QT
+
+Git, GitHub
+
+Photoshop, Krita
 
 ___
 
