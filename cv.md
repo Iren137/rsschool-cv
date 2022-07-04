@@ -19,7 +19,13 @@ ___
 
 C++, Assembly, Python, JavaScript
 
+HTML, CSS
+
 QT
+
+Git, GitHub
+
+Photoshop, Krita
 
 ___
 
