@@ -1,43 +1,452 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+    vertical-align: baseline;
+    display: block;
+}
+
+html{
+    padding: 5%;
+}
+
+a{
+    color: lightblue;
+}
+
+/*a:visited {*/
+/*    color: deeppink;*/
+/*}*/
+
+a:hover{
+    color: darkmagenta;
+}
+
+a:active {
+    color: pink;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    color: white;
+}
+
+*{
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #191919;
+    font-family: sans-serif;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: #1a1a1a;
+}
+.link-group{
+    list-style: none;
+    display: flex;
+}
+
+.link a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+
+.link a:hover{
+    color: cadetblue;
+}
+
+.link a:active{
+    color: mediumslateblue;
+}
+
+.home-section.active,
+.project-section.active,
+.about-section.active,
+.contact-section.active{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
+}
+
+h2{
+    font-size: 3rem;
+    color: aquamarine;
+    text-align: center;
+    padding-bottom: 70px;
+    padding-top: 100px;
+}
+
+h3{
+    margin-left: 40px;
+    font-size: 1.8rem;
+    padding: 50px;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+h5{
+    font-size: 1.8rem;
+    margin-top: 50px;
+    float: left;
+    margin-right: 10px;
+    line-height: 1.5;
+}
+
+h4{
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.5rem;
+    padding: 20px 0 0;
+    line-height: 1.5;
+}
+
+ol, ul{
+    font-size: 1.5rem;
+    color: white;
+    line-height: 2;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
-    content: none;
+
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+div{
+    align-content: center;
+}
+
+.round {
+    object-fit: cover;
+    border-radius: 900px;
+    border: 3px solid white;
+    box-shadow: 0 0 15px blue;
+ }
+
+.home-section{
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.hero-heading{
+    color: #fff;
+    font-size: 110px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.home-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.about-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.about{
+    width: 100%;
+    display: grid;
+    text-align: center;
+}
+.about-img-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 40px;
+    padding: 50px 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-img-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 5% 5% 90%;
+    grid-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.footer-img-container2{
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.about-info{
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
+}
+.about-img{
+    width: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.project-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.project-heading{
+    font-size: 100px;
+    background: darkslategray;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: slategray;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+.project-card{
+    height: 400px;
+    position: relative;
+}
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+    opacity: 1;
+}
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+.project-info{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.project-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+}
+.project-card:hover .project-img{
+    filter: blur(20px);
+}
+.project-card:hover .project-content{
+    opacity: 1;
+}
+
+.contact-section{
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    padding: 200px 150px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 5px 10px;
+}
+::placeholder{
+    color: #fff;
+}
+#msg{
+    height: 280px;
+    resize: none;
+    font-family: sans-serif;
+}
+.form-submit-btn{
+    background: #ff4f4f;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 40px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.my_contacts{
+    color: lemonchiffon;
+    text-align: center;
+    display: block;
+}
+
+.left{
+    float: left;
+}
+
+.footer-left{
+    float: right;
+}
+
+.right{
+    float: right;
+    color: white;
+    text-align: justify;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.footer-right{
+    float: left;
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.footer-div{
+    border: 7px inset lightskyblue;
+    padding: 20px 0 0;
+}
+
+.code{
+    color: black;
+    text-align: left;
+    font-size: 2em;
+}
+
+.colortextblue {
+    color: darkblue;
+}
+
+.colortextlightblue {
+    color: dodgerblue;
 }
