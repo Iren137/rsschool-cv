@@ -1,0 +1,214 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>CV_Voronkina</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<nav class="navbar">
+    <ul class="link-group">
+        <li class="link active"><a href="#home">home</a></li>
+        <li class="link active"><a href="#about">about</a></li>
+        <li class="link active"><a href="#projects">projects</a></li>
+        <li class="link active"><a href="#contact">contact</a></li>
+    </ul>
+</nav>
+
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+
+
+        <section class="home-section active" id="home">
+            <h1 class="hero-heading">hello, i am <br> Irina <br>Voronkina</h1>
+            <img src="img/photo.jpg" class="home-img" alt="my_photo">
+        </section>
+
+        <section>
+            <div class="my_contacts" style="font-size: 30px; padding-top: 80px">
+                <b>Contacts:</b><br> irishavoronkina@gmail.com | +375291234567 | Minsk, Belarus
+            </div>
+        </section>
+
+        <section class="about-section active">
+            <div class="about">
+
+                <h2 id="about">Summary</h2>
+
+                <div class="about-img-container">
+
+                    <div class="left">
+                        <img src="img/my_photo.jpg" alt="my_photo2" class="round" width="500px">
+                    </div>
+
+                    <div class="right">
+                        C++ Developer. The ability to work in multitasking mode
+                        and high analytical skills allow me to work effectively
+                        with large amounts of information, quickly find high-quality
+                        solutions to complex problems. Always focused on goals and
+                        achieving success to rapidly evolving and dynamic environments.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p style="margin-bottom: 20px">
+                    LyceumBSU (2019-2021)
+                    </p>
+                    <h4>
+                    <i>*Profile: Mathematician.</i>
+                    </h4>
+                </li>
+                <li>
+                <p style="margin-bottom: 20px">
+                    Belarusian State University (2021-2025)
+                </p>
+                <h4>
+                    <i>*Specialization: Mathematician - system programmer.</i>
+                </h4>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+
+            <h2>Skills</h2>
+
+            <ul style="list-style-type: disc;">
+                <li>C++, Assembly, Python, JavaScript</li>
+                <li>HTML, CSS</li>
+                <li>QT</li>
+                <li>Git, GitHub</li>
+                <li>Photoshop, Krita</li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Languages</h2>
+
+            <ol>
+                <li>English &mdash; Upper intermediate</li>
+                <li>Russian &mdash; Native</li>
+                <li>Belarusian &mdash; Native</li>
+            </ol>
+
+        </section>
+
+        <section class="project-section active">
+            <h2 class="project-heading" id="projects">My projects</h2>
+            <div class="project-content">
+                <ol>
+                    <li><a href="https://github.com/Iren137/BeautifulSimple">github.com/Iren137/BeautifulSimple</a></li>
+                    <li><a href="https://github.com/Iren137/KR">github.com/Iren137/KR</a></li>
+                    <li><a href="https://github.com/Iren137/QT_Lab1">github.com/Iren137/QT_Lab1</a></li>
+                </ol>
+
+                <br>
+
+                <h3>team projects:</h3>
+
+                <br>
+
+                <ol>
+                    <li><a href="https://github.com/polina-kostyukovich/demons">github.com/polina-kostyukovich/demons</a></li>
+                    <li><a href="https://github.com/polina-kostyukovich/Lab1--RKPP">github.com/polina-kostyukovich/Lab1--RKPP</a></li>
+                </ol>
+            </div>
+        </section>
+
+            <h2>Code</h2>
+            <pre class="code">
+                <div style="background: white; width: 40%; align-content: center; padding-left: 20px; line-height: 1.5; margin-left: 0px">
+                    <code>
+
+<span class="colortextblue">int</span> Factorial(<span class="colortextblue">int</span> i) {
+    <span class="colortextblue">if</span> (i==<span class="colortextlightblue">0</span>) <span class="colortextblue">return</span> <span class="colortextlightblue">1</span>;
+    <span class="colortextblue">return</span> i*Factorial(i-<span class="colortextlightblue">1</span>);
+}
+                    </code>
+                </div>
+            </pre>
+
+            <pre class="code">
+                <div style="background: white; width: 40%; align-content: center; padding-left: 20px; line-height: 1.5; margin-left: 0px">
+                    <code>
+
+<span class="colortextblue">int</span> EulerFunction (<span class="colortextblue">int</span> n) {
+    <span class="colortextblue">int</span> result = n;
+    <span class="colortextblue">for</span> (<span class="colortextblue">int</span> i=<span class="colortextlightblue">2</span>; i*i<=n; ++i)
+        <span class="colortextblue">if</span> (n % i == <span class="colortextlightblue">0</span>) {
+            <span class="colortextblue">while</span> (n % i == <span class="colortextlightblue">0</span>) {
+                n /= i;
+            }
+            result -= result / i;
+        }
+    <span class="colortextblue">if</span> (n > <span class="colortextlightblue">1</span>)
+        result -= result / n;
+    <span class="colortextblue">return</span> result;
+}
+                    </code>
+                </div>
+            </pre>
+        </section>
+
+
+    </main>
+</body>
+
+<section class="contact-section active" id="contact">
+    <form class="contact-form">
+        <input type="text" name="name" id="name" autocomplete="off" placeholder="name" required>
+        <input type="text" name="email" id="email" autocomplete="off" placeholder="email" required>
+        <textarea name="msg" id="msg" placeholder="message" autocomplete="off"></textarea>
+        <button type="submit" class="form-submit-btn" value="send">contact</button>
+    </form>
+
+    <div class="map">
+        <iframe src="https://goo.gl/maps/bdshyFxkgQnpPXhi9" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-div">
+
+        <div class="footer-img-container">
+            <div class="footer-left">
+                <img src="img/github.jpg" alt="GitHub" class="about-img">
+            </div>
+
+            <div class="footer-right">
+                <h5 style="margin-right: 0px;">:</h5>
+                <h3 style="text-transform: none; margin-left: 0px;"><a href="https://github.com/Iren137">github.com/Iren137</a></h3>
+            </div>
+        </div>
+
+        <div class="footer-img-container2">
+            <div class="footer-left">
+                <img src="img/Rolling_school.png" alt="Rolling School" class="about-img">
+            </div>
+
+            <div>
+                <h5 style="text-align: left">Study project for </h5>
+                <h3 style="text-transform: none"><a href="https://github.com/rolling-scopes-school/tasks"> github.com/rolling-scopes-school/tasks</a></h3>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 0px; margin-bottom: 20px;">2022</p>
+    </div>
+</footer>
+</html>
